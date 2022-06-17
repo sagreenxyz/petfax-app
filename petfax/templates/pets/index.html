@@ -14,6 +14,7 @@
         <h2><a href={{pet.pet_id}}>{{ pet.pet_name }}</a></h2>
         <div><a href={{pet.pet_id}}><img src="{{ url_for('static', filename='./assets/') }}{{ pet.pet_photo }}" alt="Photo of pet" width="200" /></a></div>
         <div><a href={{pet.pet_id}}>Learn More ></a></div>
+        We'd love to learn more fun facts! <a href="/facts/new">Submit some here.</a>
     {% endfor %}
 </body>
 
