@@ -11,6 +11,7 @@ def index():
 
         new_fact = models.Fact(submitter=submitter, fact=fact)
         models.db.session.add(new_fact)
+        models.db.session.commit()
 
         return redirect('/facts')
 
