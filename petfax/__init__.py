@@ -6,6 +6,9 @@ def create_app():
     app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:postgres@127.0.0.1:5432/petfax'
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False     
 
+    from . import models
+    models.db.init_app(app)
+
     @app.route('/')
     def hello(): 
         return 'Hello, PetFax!'
