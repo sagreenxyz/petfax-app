@@ -17,7 +17,7 @@ def index():
 
     results = models.Fact.query.all()
 
-    return render_template('facts/index.html')
+    return render_template('facts/index.html', facts=results)
 
 @bp.route('/new')
 def new():
