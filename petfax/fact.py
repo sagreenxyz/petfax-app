@@ -10,6 +10,7 @@ def index():
         fact = request.form['fact']
 
         new_fact = models.Fact(submitter=submitter, fact=fact)
+        models.db.session.add(new_fact)
 
         return redirect('/facts')
 
